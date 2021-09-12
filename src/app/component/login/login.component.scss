@@ -1,5 +1,15 @@
+$breakpoint-tablet: 768px;
+
 .form-login {
     margin: auto;
     width: 35%;
     text-align: center;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .form-login {
+        margin: auto;
+        width: 95%;
+        text-align: center;
+    }
 }

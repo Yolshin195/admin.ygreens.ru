@@ -1,10 +1,13 @@
 <ng-template [ngIf]="!userServer.authenticated">
+  <mat-toolbar color="primary">
+    <span>YGreens</span>
+  </mat-toolbar>
   <app-login></app-login>
 </ng-template>
 
 <ng-template [ngIf]="userServer.authenticated">
   <app-navbar (toggleNav)="drawer.toggle()"></app-navbar>
-  
+
   <mat-drawer-container class="example-container" autosize>
   
     <mat-drawer #drawer class="example-sidenav" mode="side">

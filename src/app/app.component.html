@@ -1,4 +1,4 @@
-<app-navbar class="mat-elevation-z6"></app-navbar>
+<app-navbar (toggleNav)="drawer.toggle()"></app-navbar>
 
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
@@ -7,6 +7,17 @@
     <button (click)="showFiller = !showFiller" mat-raised-button>
       Toggle extra text
     </button>
+    <mat-nav-list>
+      <div mat-subheader>Справочники</div>
+      <mat-list-item>
+        <mat-icon mat-list-icon>note</mat-icon>
+        Номенклатура
+      </mat-list-item>
+      <mat-list-item>Контрагент</mat-list-item>
+      <mat-divider></mat-divider>
+      <div mat-subheader>Производство</div>
+      <mat-list-item>Посадки</mat-list-item>
+    </mat-nav-list>
   </mat-drawer>
 
   <div class="example-sidenav-content">

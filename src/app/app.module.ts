@@ -12,6 +12,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatSidenavModule,
     MatButtonModule,
     MatToolbarModule,
+    MatListModule,
+    MatDividerModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

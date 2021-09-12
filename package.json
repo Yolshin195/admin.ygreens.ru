@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prod": "ng build --configuration=production",
+    "deploy-github": "ng build --output-path docs --base-href https://yolshin195.github.io/admin.ygreens.ru/"
   },
   "private": true,
   "dependencies": {

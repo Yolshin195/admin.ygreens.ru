@@ -22,12 +22,16 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 import { LoginComponent } from './component/login/login.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { NomenclatureComponent } from './component/reference/nomenclature/nomenclature.component';
+import { MainComponent } from './component/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    NomenclatureComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

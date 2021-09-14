@@ -19,11 +19,15 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { LoginComponent } from './component/login/login.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { NomenclatureComponent } from './component/reference/nomenclature/nomenclature.component';
 import { MainComponent } from './component/main/main.component';
+import { NomenclatureNewComponent } from './component/reference/nomenclature/nomenclature-new/nomenclature-new.component';
+import { NomenclatureListComponent } from './component/reference/nomenclature/nomenclature-list/nomenclature-list.component';
+import { UploadImageComponent } from './component/form-control/upload-image/upload-image.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { MainComponent } from './component/main/main.component';
     NavbarComponent,
     LoginComponent,
     NomenclatureComponent,
-    MainComponent
+    MainComponent,
+    NomenclatureNewComponent,
+    NomenclatureListComponent,
+    UploadImageComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +58,7 @@ import { MainComponent } from './component/main/main.component';
     MatInputModule,
     MatFormFieldModule,
     MatSlideToggleModule,
+    MatGridListModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

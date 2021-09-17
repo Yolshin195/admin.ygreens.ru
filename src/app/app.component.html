@@ -10,7 +10,7 @@
 
   <mat-drawer-container class="example-container" autosize>
   
-    <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+    <mat-drawer #drawer class="example-sidenav" [mode]="isMobail ? 'push':'side'" [opened]="!isMobail">
       <mat-nav-list>
         <div mat-subheader>Справочники</div>
         <mat-list-item routerLink="/nomenclature">

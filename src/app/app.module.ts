@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import {LayoutModule} from '@angular/cdk/layout';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
@@ -49,6 +50,7 @@ import { UploadImageComponent } from './component/form-control/upload-image/uplo
     ReactiveFormsModule,
     HttpClientModule,
 
+    LayoutModule,
     MatIconModule,
     MatSidenavModule,
     MatButtonModule,

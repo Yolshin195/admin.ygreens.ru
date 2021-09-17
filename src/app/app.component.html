@@ -41,6 +41,14 @@
         <mat-divider></mat-divider>
         <div mat-subheader>Администрирование</div>
         <mat-list-item>Пользователи</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <span>{{userServer.user?.username}}</span>
+          <span class="spacer"></span>
+          <button mat-icon-button aria-label="logout" (click)="onLogout()">
+            <mat-icon>logout</mat-icon>
+          </button>
+        </mat-list-item>
       </mat-nav-list>
     </mat-drawer>
   

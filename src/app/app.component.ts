@@ -16,4 +16,8 @@ export class AppComponent  implements OnInit  {
   ngOnInit(): void {
     
   }
+
+  onLogout(): void {
+    this.userServer.logout(() => {});
+  }
 }

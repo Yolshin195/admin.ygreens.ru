@@ -10,7 +10,7 @@
 
   <mat-drawer-container class="example-container" autosize>
   
-    <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mat-drawer #drawer class="example-sidenav" mode="side" opened>
       <mat-nav-list>
         <div mat-subheader>Справочники</div>
         <mat-list-item routerLink="/nomenclature">
@@ -19,8 +19,20 @@
         </mat-list-item>
         <mat-list-item>Контрагент</mat-list-item>
         <mat-divider></mat-divider>
-        <div mat-subheader>Производство</div>
+        <div mat-subheader>Документы</div>
+        <mat-list-item>Установка цен</mat-list-item>
+        <mat-list-item>Закупки</mat-list-item>
+        <mat-list-item>Продажи</mat-list-item>
         <mat-list-item>Посадки</mat-list-item>
+        <mat-list-item>Выставить на стелаж (без света)</mat-list-item>
+        <mat-list-item>Выставить на стелаж (со светом)</mat-list-item>
+        <mat-list-item>Выставить на продажу</mat-list-item>
+        <mat-list-item>Полив</mat-list-item>
+        <mat-divider></mat-divider>
+        <div mat-subheader>Регистры</div>
+        <mat-list-item>Цены</mat-list-item>
+        <mat-list-item>Остатки</mat-list-item>
+        <mat-list-item></mat-list-item>
       </mat-nav-list>
     </mat-drawer>
   

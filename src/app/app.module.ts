@@ -20,6 +20,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { LoginComponent } from './component/login/login.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
@@ -59,6 +60,7 @@ import { UploadImageComponent } from './component/form-control/upload-image/uplo
     MatFormFieldModule,
     MatSlideToggleModule,
     MatGridListModule,
+    MatTabsModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

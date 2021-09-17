@@ -1,7 +1,42 @@
-<app-nomenclature-new></app-nomenclature-new>
+<mat-toolbar color="primary" style="width: 800px;">
+    <span>Nomenclature</span>
 
-<ul>
-    <li *ngFor="let nomenclature of nomenclatureList">
-        {{nomenclature.id}} - {{nomenclature.title}}
-    </li>
-</ul>
+    <span class="spacer"></span>
+
+    <mat-form-field appearance="standard">
+        <mat-label>Search...</mat-label>
+        <input matInput type="text" [(ngModel)]="searchValue">
+        <button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="searchValue=''">
+          <mat-icon>close</mat-icon>
+        </button>
+        <button *ngIf="!searchValue" matSuffix mat-icon-button aria-label="Search">
+            <mat-icon>search</mat-icon>
+          </button>
+    </mat-form-field>
+</mat-toolbar>
+<mat-tab-group>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">list</mat-icon>
+            List
+          </ng-template>
+        <mat-nav-list>
+            <mat-list-item *ngFor="let nomenclature of nomenclatureList">
+               <span matLine>{{nomenclature.id}} - {{nomenclature.title}}</span>
+               <button mat-icon-button>
+                  <mat-icon>edit</mat-icon>
+               </button>
+               <button mat-icon-button>
+                <mat-icon>delete</mat-icon>
+             </button>
+            </mat-list-item>
+          </mat-nav-list>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">add</mat-icon>
+            New
+        </ng-template>
+        <app-nomenclature-new></app-nomenclature-new>
+    </mat-tab>
+</mat-tab-group>

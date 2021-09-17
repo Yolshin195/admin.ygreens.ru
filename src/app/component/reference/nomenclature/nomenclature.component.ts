@@ -9,6 +9,7 @@ import { Nomenclature, NomenclatureService } from 'src/app/services/nomenclature
 })
 export class NomenclatureComponent implements OnInit {
   nomenclatureList: Nomenclature[] = [];
+  searchValue: string = "";
 
   constructor(private fb:FormBuilder, public nomenclatureService: NomenclatureService) { }
 

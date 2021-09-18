@@ -1,11 +1,20 @@
 import { Component, forwardRef, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Image, ImageService } from 'src/app/services/image.service';
+import { ImageService, Image } from 'src/app/services/image.service';
 
 @Component({
-  selector: 'app-upload-image',
-  templateUrl: './upload-image.component.html',
-  styleUrls: ['./upload-image.component.css'],
+  selector: 'form-upload-image',
+  template: `
+    <div (click)="fileInput.click()">
+      <img src={{path}} class="img-thumbnail" alt="..." style="width: 100%;">
+        <input
+            style="display: none"
+            #fileInput
+            type="file" (change)="onFileSelected($event)" >
+    </div>
+  `,
+  styles: [
+  ],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => UploadImageComponent),

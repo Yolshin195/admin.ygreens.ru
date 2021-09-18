@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Nomenclature, NomenclatureService } from 'src/app/services/nomenclature.service';
 
 @Component({
-  selector: 'app-nomenclature',
+  selector: 'reference-nomenclature',
   templateUrl: './nomenclature.component.html',
   styleUrls: ['./nomenclature.component.scss']
 })

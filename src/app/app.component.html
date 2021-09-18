@@ -11,13 +11,18 @@
   <mat-drawer-container class="example-container" autosize>
   
     <mat-drawer #drawer class="example-sidenav" [mode]="isMobail ? 'push':'side'" [opened]="!isMobail">
+      <mat-toolbar color="primary">
+        <mat-icon>grass</mat-icon>
+        <span>YGreens</span>
+      </mat-toolbar>
       <mat-nav-list>
         <div mat-subheader>Справочники</div>
-        <mat-list-item routerLink="/nomenclature">
+        <mat-list-item routerLink="/reference/nomenclature">
           Номенклатура
         </mat-list-item>
         <mat-list-item>Типы номенклатуры</mat-list-item>
         <mat-list-item>Контрагенты</mat-list-item>
+        <mat-list-item>Изображения</mat-list-item>
         <mat-divider></mat-divider>
         <div mat-subheader>Документы</div>
         <mat-list-item>Установка цен</mat-list-item>

@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { MainComponent } from './component/main/main.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 //import { UploadImageComponent } from './component/form-control/upload-image/upload-image.component';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MainComponent } from './component/main/main.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FlexLayoutModule,
 
     MaterialModule,
 

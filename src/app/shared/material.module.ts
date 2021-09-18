@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
+import {TextFieldModule} from '@angular/cdk/text-field';
 
 @NgModule({
   declarations: [],
@@ -29,7 +30,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatFormFieldModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    TextFieldModule
   ]
 })
 export class MaterialModule { }

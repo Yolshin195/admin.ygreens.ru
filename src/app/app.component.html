@@ -6,16 +6,15 @@
 </ng-template>
 
 <ng-template [ngIf]="userServer.authenticated">
-  <app-navbar (toggleNav)="drawer.toggle()"></app-navbar>
 
-  <mat-drawer-container class="example-container" autosize>
+  <mat-drawer-container class="app-sidenav-container" autosize>
   
-    <mat-drawer #drawer class="example-sidenav" [mode]="isMobail ? 'push':'side'" [opened]="!isMobail">
+    <mat-drawer #drawer class="app-sidenav mat-elevation-z10" [mode]="isMobail ? 'push':'side'" [opened]="!isMobail">
       <mat-toolbar color="primary">
         <mat-icon>grass</mat-icon>
         <span>YGreens</span>
       </mat-toolbar>
-      <mat-nav-list>
+      <mat-nav-list style="height: calc(100vh - 120px);overflow: auto;">
         <div mat-subheader>Справочники</div>
         <mat-list-item routerLink="/reference/nomenclature">
           Номенклатура
@@ -47,17 +46,17 @@
         <div mat-subheader>Администрирование</div>
         <mat-list-item>Пользователи</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>
-          <span>{{userServer.user?.username}}</span>
-          <span class="spacer"></span>
-          <button mat-icon-button aria-label="logout" (click)="onLogout()">
-            <mat-icon>logout</mat-icon>
-          </button>
-        </mat-list-item>
       </mat-nav-list>
+      <span style="display: flex;align-items: center; padding: 0 16px;font-size: 16px;height: 48px; background: #3f51b5; color: #fff; font: 500 20px/32px Roboto, 'Helvetica Neue', sans-serif;letter-spacing: normal; margin: 0;">
+        <span>{{userServer.user?.username}}</span>
+        <span class="spacer"></span>
+        <button mat-icon-button aria-label="logout" (click)="onLogout()">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </span>
     </mat-drawer>
   
-    <div class="example-sidenav-content">
+    <div class="app-sidenav-content">
       <router-outlet></router-outlet>
     </div>
   

@@ -9,6 +9,7 @@ import { ReferenceRoutingModule } from './reference-routing.module';
 import { NomenclatureListComponent } from './component/nomenclature/nomenclature-list/nomenclature-list.component';
 import { NomenclatureNewComponent } from './component/nomenclature/nomenclature-new/nomenclature-new.component';
 import { NomenclatureComponent } from './component/nomenclature/nomenclature.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { NomenclatureComponent } from './component/nomenclature/nomenclature.com
     ReferenceRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
 
     MaterialModule,
     FormControlModule
